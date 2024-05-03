@@ -1,0 +1,34 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vs/ProjectEvaluation/stockmanagement.metadata.v7.bin
+.vs/ProjectEvaluation/stockmanagement.projects.v7.bin
+.vs/StockManagement/DesignTimeBuild/.dtbcache.v2
+.vs/StockManagement/FileContentIndex/0e05d933-1879-4f38-b04e-12c70336612e.vsidx
+.vs/StockManagement/FileContentIndex/025e5545-c830-49a5-bb67-850a9c4436f4.vsidx
+.vs/StockManagement/FileContentIndex/2681a350-b3d1-482d-a024-9dcf03b7c7f8.vsidx
+.vs/StockManagement/FileContentIndex/c7f49246-c8ae-413d-a2e4-efe339bfb87e.vsidx
+.vs/StockManagement/FileContentIndex/eb121ec4-d29d-4336-85f9-1bbef95e52c7.vsidx
+.vs/StockManagement/config/applicationhost.config
+.vs/StockManagement/v17/.futdcache.v2
+.vs/StockManagement/v17/.suo
