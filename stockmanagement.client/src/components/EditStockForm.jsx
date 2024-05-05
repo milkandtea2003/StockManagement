@@ -52,10 +52,24 @@ const EditButton = ({ record, actionRef }) => {
   const handleChange = ({ fileList: newFileList }) => setFileList(newFileList);
 
   const onFinish = async (values) => {
+    // console.log(record.stock_Image)
     try {
       const formData = new FormData();
+      // console.log(values);
+      let base64Images;
+      if (values.Stock_Image && values.Stock_Image.length > 0) {
+        if (values.Stock_Image[0].thumbUrl !== record.stock_Image.url) {
+          base64Images = values.Stock_Image[0].thumbUrl;
+          // console.log("User selected a different image");
+        } else {
+          // console.log("User did not change the image");
+          base64Images = `data:image/png;base64,${record.stock_Image}`;
+        }
+      } else {
+        base64Images = `data:image/png;base64,${record.stock_Image}`;
+      }
 
-      const base64Images = values.Stock_Image[0].thumbUrl;
+      // console.log(base64Images)
       formData.append("Stock_Image", base64Images);
 
       const StockId = record.stock_ID;
@@ -68,7 +82,7 @@ const EditButton = ({ record, actionRef }) => {
         `${API_EDITSTOCK}?id=${StockId}`,
         formData
       );
-      console.log(response);
+      // console.log(response);
       message.success(response.data.message);
       actionRef.current.reload();
       return true;

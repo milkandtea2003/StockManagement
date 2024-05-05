@@ -127,11 +127,16 @@ namespace StockManagement.Controllers
             {
                 return NotFound("Stock Not Found");
             }
-            Regex regex = new Regex(@"^[\w/\:.-]+;base64,");
-            updateStock.Stock_Image = regex.Replace(updateStock.Stock_Image, string.Empty);
-            byte[] fileByte = Convert.FromBase64String(updateStock.Stock_Image);
+
+            if (!string.IsNullOrEmpty(updateStock.Stock_Image))
+            {
+                Regex regex = new Regex(@"^[\w/\:.-]+;base64,");
+                updateStock.Stock_Image = regex.Replace(updateStock.Stock_Image, string.Empty);
+                byte[] fileByte = Convert.FromBase64String(updateStock.Stock_Image);
+                dbStock.Stock_Image = fileByte;
+            }
+            dbStock.Stock_Image = dbStock.Stock_Image;
             dbStock.Stock_Name = updateStock.Stock_Name;
-            dbStock.Stock_Image = fileByte;
             dbStock.Quantity = updateStock.Quantity;
             dbStock.Category = updateStock.Category;
             dbStock.Price = updateStock.Price;
@@ -139,12 +144,11 @@ namespace StockManagement.Controllers
             try
             {
                 await _context.SaveChangesAsync();
-                return Ok(
-                    new ApiResponseMessage
-                    {
-                        Status = "Success",
-                        Message = $"Successfull Edited Stock Id {id}"
-                    });
+                return Ok(new ApiResponseMessage
+                {
+                    Status = "Success",
+                    Message = $"Successfully Edited Stock Id {id}"
+                });
             }
             catch (Exception)
             {
@@ -152,6 +156,7 @@ namespace StockManagement.Controllers
                 throw;
             }
         }
+
 
         [HttpDelete]
         public async Task<IActionResult> DeleteStockById([FromQuery] int id)
