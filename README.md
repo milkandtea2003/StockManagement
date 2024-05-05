@@ -5,7 +5,7 @@ Welcome to the Stock Management project! This application is built to streamline
 
 * __Frontend__: Built with __React.js__ and styled using __Ant Design__, a popular UI framework for React applications. Ant Design provides a sleek and responsive user interface, enhancing the overall user experience.
 
-* __Backend__: Developed with __ASP.NET MVC using C#__ as the primary programming language. __Entity Framework Core (EF Core)__ is utilized for database interaction, offering seamless data access and manipulation.
+* __Backend__: Developed with __ASP.NET Core Web API__ as the primary programming language. __Entity Framework Core (EF Core)__ is utilized for database interaction, offering seamless data access and manipulation.
 
 * __Database__: Utilizes __Microsoft SQL Server (MS SQL)__ as the backend database management system. MS SQL provides robust data storage and retrieval capabilities, ensuring the reliability and scalability of the application.
 ## Demo Screenshots
