@@ -56,16 +56,17 @@ To run the Stock Management application locally, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
 
-git clone https://github.com/milkandtea2003/StockManagement.git
+<u>git clone https://github.com/milkandtea2003/StockManagement.git</u>
 
 2. **Install Frontend Dependencies**: Navigate to the project directory and install frontend dependencies using npm or yarn:
 
-cd stockmanagement.client
-npm install
+<u>cd stockmanagement.client</u>
+
+<u>npm install</u>
 
 3. **Run the Frontend**: Start the frontend development server:
 
-npm run start
+<u>npm run start</u>
 
 4. **Access the Frontend**: Open your web browser and navigate to `http://localhost:3000` to access the Stock Management application frontend.
 
