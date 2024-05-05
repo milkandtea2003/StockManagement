@@ -25,11 +25,11 @@ __Figure 3__: Filter By Category - Filtering stock items by category
 __Figure 4__: Filter By Price - Filtering stock items by price range
 
 
-![Add Stock](Demonstration/AddStockForm.png.png)
+![Add Stock](Demonstration/AddStockForm.png)
 __Figure 5__: Add Stock Form - Adding a new stock item
 
 
-![Add Result](Demonstration/AddStockResult.png.png)
+![Add Result](Demonstration/AddStockResult.png)
 __Figure 6__: Add Stock Result - Confirmation of successful stock addition
 
 
