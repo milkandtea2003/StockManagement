@@ -48,3 +48,9 @@ __Figure 9__: Delete Stock - Prompt for confirmation before deleting a stock ite
 ![Delete Result](Demonstration/DeleteSuccess.png)
 __Figure 10__: Delete Result - Confirmation of successful stock item deletion
 
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+
+## License
+This project is licensed under the __MIT License__.
